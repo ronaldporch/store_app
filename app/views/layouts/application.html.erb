@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "Awesome Store", products_path %></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><%= link_to "Browse Products", products_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Price List"%></li>
+          <li class="divider"></li>
+          <li><%= link_to "Contact Us"%></li>
+          <li class="divider"></li>
+          <li><%= link_to "Cart"%></li>
+        </ul>
+      </section>
+    </nav>
+
+<div class="row">
+  <div class="large-8 columns">
+    <%= yield %>
+  </div>
+  <div class="large-4 columns">
+    <h2 class="subheader">About Us</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam leo elit, varius ac cursus eu, placerat quis magna. Pellentesque pretium dolor neque, nec eleifend sem placerat non. Etiam vel facilisis justo. Duis in rutrum orci. Nulla erat mauris, sollicitudin in varius sit amet, volutpat vel lacus. Sed ultrices ex eget ligula finibus, eget lacinia nisi rhoncus. Praesent vitae ligula eget justo vestibulum scelerisque. Maecenas et arcu sed odio dictum interdum. Proin eleifend cursus ex, sed porttitor justo egestas ac. Pellentesque vitae venenatis erat, in facilisis urna. Mauris sed malesuada justo, vitae lacinia felis. Suspendisse quis mattis augue. Donec pharetra ex eu turpis volutpat suscipit.
+
+Praesent ultricies aliquet eleifend. Suspendisse quis eleifend nibh. Quisque a magna a lacus sollicitudin aliquam. Donec vitae magna vitae felis malesuada lobortis vitae tempor sapien. Quisque vel volutpat felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque luctus, leo a sollicitudin ultrices, leo nulla volutpat diam, in auctor massa enim a eros. Nam imperdiet euismod metus, luctus ultricies dolor commodo et. Proin placerat molestie congue. Curabitur sed imperdiet ligula, non consequat elit. Morbi sed libero odio. Morbi finibus, lacus id congue consectetur, turpis ligula suscipit velit, a rhoncus nunc lorem sit amet ligula. </p>
+  </div>
+</div>
+
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
